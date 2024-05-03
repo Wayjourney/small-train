@@ -1,0 +1,31 @@
+<!--pages/income.create/create.wxml-->
+<view class="form">
+  <view class="form-title">录入</view>
+  <view class="form-group">
+    <view class="form-group__title">手机号码</view>
+    <view class="form-group__input">
+      <input type="digit" auto-focus placeholder="请输入顾客手机号码" />
+    </view>
+  </view>
+  <view class="form-group">
+    <view class="form-group__title">类型</view>
+    <view class="form-group__value">
+      {{ type === 'single' ? '单次' : '充值' }}
+    </view>
+  </view>
+  <view wx:if="{{ type === 'charge' }}" class="form-group">
+    <view class="form-group__title">金额</view>
+    <view class="form-group__value">
+      {{amount}}元
+    </view>
+  </view>
+  <view class="form-group">
+    <view class="form-group__title">次数</view>
+    <view class="form-group__value">
+      {{count}}次
+    </view>
+  </view>
+  <view class="form-group">
+    <button type="primary" loading="{{loading}}" class="form-group__submit" bindtap="handleConfirm">提交</button>
+  </view>
+</view>

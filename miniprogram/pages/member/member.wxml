@@ -1,0 +1,30 @@
+<!--pages/member/member.wxml-->
+<view class="search">
+  <view class="search__inner">
+    <input type="digit" placeholder-style="color:#475569;" placeholder="输入手机号码" value="{{phone}}" 	bindinput="handleInputChange" />
+    <view class="search__inner__image" bindtap="handleSearch">
+      <image class="img-search" style="width:48rpx;height:48rpx;" src="{{svgImg}}" />
+    </view>
+  </view>
+</view>
+
+<view wx:if="{{user}}" class="user-msg">
+  <view class="user-msg-item">
+    <view class="user-msg-item__title">用户</view>
+    <view>{{phone}}</view>
+  </view>
+  <view class="user-msg-item">
+    <view class="user-msg-item__title">剩余次数</view>
+    <view class="user-msg-item__value">{{user.count}}次</view>
+  </view>
+</view>
+<view wx:else class="user-msg">
+  <view class="user-msg-tip">
+    输入手机号码，查询会员信息
+  </view>
+</view>
+
+
+<view wx:if="{{user && user.count > 0}}" class="operation">
+  <button type="primary" loading="{{loading}}" class="form-group__submit" bindtap="handleConfirm">核销</button>
+</view>

@@ -1,0 +1,27 @@
+<!--pages/receipt/receipt.wxml-->
+<view class="list">
+  <block wx:for="{{list}}" wx:key="key" wx:for-index="key" wx:for-item="value">
+    <view class="date-index-title">
+      <view class="border-title"></view>
+      {{key}}
+      <view class="border-title"></view>
+    </view>
+    <view class="list-item" wx:for="{{value}}" wx:key="index" data-id="{{item.id}}" data-phone="{{item.user.phone}}" data-valid="{{item.valid}}" bindtap="handleReceipt">
+      <view class="list-item__phone{{validList[item.id] ? '' : ' list-item__phone--invalid'}}">
+        <text>{{item.user.phone}}</text>
+      </view>
+      <view><text class="name">日期:</text> {{item.created_at}} </view>
+    </view>
+  </block>
+  
+  <view wx:if="{{count === 0 && !isLoading}}" class="card">
+    <view class="card-msg">
+      暂无数据
+    </view>
+  </view>
+
+  <view wx:if="{{!nextCursor}}" class="no-more">
+    <text>已经到底了</text>
+  </view>
+</view>
+

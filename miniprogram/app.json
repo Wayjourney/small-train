@@ -1,0 +1,53 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/member/member",
+    "pages/receipt/receipt",
+    "pages/income/income",
+    "pages/income.create/create",
+    "pages/logs/logs",
+    "pages/auth/auth"
+  ],
+  "tabBar": {
+    "custom": true,
+    "color": "#7A7E83",
+    "selectedColor": "#15B628",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "image/home.png",
+        "selectedIconPath": "image/home_active.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/member/member",
+        "iconPath": "image/user.png",
+        "selectedIconPath": "image/user_active.png",
+        "text": "会员"
+      },
+      {
+        "pagePath": "pages/receipt/receipt",
+        "iconPath": "image/list.png",
+        "selectedIconPath": "image/list_active.png",
+        "text": "小票"
+      },
+      {
+        "pagePath": "pages/income/income",
+        "iconPath": "image/list.png",
+        "selectedIconPath": "image/list_active.png",
+        "text": "流水"
+      }
+    ]
+  },
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "众众小火车",
+    "navigationBarBackgroundColor": "#ffffff",
+    "backgroundColor": "#fff"
+  },
+  "style": "v2",
+  "componentFramework": "glass-easel",
+  "lazyCodeLoading": "requiredComponents"
+}

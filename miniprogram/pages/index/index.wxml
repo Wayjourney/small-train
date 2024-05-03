@@ -1,0 +1,30 @@
+<!--index.wxml-->
+<scroll-view scroll-y>
+  <view class="top-wrapper">
+    <image class="cover" src="/image/train.jpg" />
+    <view class="order single-order" data-type="single" data-amount="40" data-count="1"  bindtap="handleOrder">
+      <view class="order__header">
+        单次
+      </view>
+      <view class="order__content">40元/次</view>
+    </view>
+  </view>
+
+  <view class="bottom-wrapper">
+    <view class="order order-300" data-type="charge" data-amount="300" data-count="25" bindtap="handleOrder">
+      <view class="order__header">充值300</view>
+      <view class="order__content">25次</view>
+    </view>
+
+    <view class="bottom-wrapper-right">
+      <view class="order order-200" data-type="charge" data-amount="200" data-count="15" bindtap="handleOrder">
+        <view class="order__header">充值200</view>
+        <view class="order__content">15次</view>
+      </view>
+      <view class="order order-150" data-type="charge" data-amount="150" data-count="10" bindtap="handleOrder">
+        <view class="order__header">充值150</view>
+        <view class="order__content">10次</view>
+      </view>
+    </view>
+  </view>
+</scroll-view>

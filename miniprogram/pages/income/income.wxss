@@ -1,0 +1,66 @@
+/* pages/income/income.wxss */
+.date-index-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: sticky;
+  top: 0rpx;
+  margin-top: 12rpx;
+  padding: 24rpx;
+  font-size: 32rpx;
+  color: #94a3b8;
+  text-align: center;
+  background-color: rgb(245, 245, 245);
+}
+.border-title {
+  margin: 0 20rpx;
+  height: 2rpx;
+  width: 40rpx;
+  background-color: #e2e8f0;
+}
+.list {
+  padding-bottom: calc(100rpx + env(safe-area-inset-bottom));
+}
+.list-item {
+  margin: 0 32rpx 32rpx;
+  padding: 32rpx;
+  font-size: 32rpx;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 2px rgba(0, 0, 0, .1);
+}
+.list-item + .list-item {
+  margin: 32rpx;
+  color: #1e293b;
+}
+.list-item>view:not(:last-child) {
+  margin-bottom: 8rpx;
+}
+.list .name {
+  color: #475569;
+}
+.no-more {
+  padding-top: 24rpx;
+  padding-bottom: 48rpx;
+  text-align: center;
+  color: #94a3b8;
+  font-size: 24rpx;
+}
+.hidden {
+  display: none;
+}
+.card {
+  margin: 32rpx;
+  padding: 40rpx;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 2px rgba(0, 0, 0, .1);
+}
+.card-msg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200rpx;
+  color: #94a3b8;
+  font-size: 32rpx;
+}

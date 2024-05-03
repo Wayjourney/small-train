@@ -1,0 +1,24 @@
+<!--pages/auth.wxml-->
+<scroll-view>
+  <view class="form">
+    <view class="form-title">登录</view>
+    <view class="form-group">
+      <button class="avatar-btn" open-type="chooseAvatar" bind:chooseavatar="onChooseAvatar">
+        <image class="avatar" mode="aspectFill" src="{{userInfo.avatarUrl}}"></image>
+      </button>
+    </view>
+    <view class="form-group">
+      <view class="form-group__title">昵称</view>
+      <input type="nickname" class="form-group__input" placeholder="请输入昵称" bind:change="onInputChange" />
+    </view>
+    <view class="form-group">
+      <view class="form-group__title">手机号码</view>
+      <view class="form-group__input">
+        <input type="digit" auto-focus placeholder="请输入管理员手机号码" bind:change="onPhoneInputChange" />
+      </view>
+    </view>
+    <view class="form-group">
+      <button type="primary" loading="{{loading}}" class="form-group__submit" bindtap="handleConfirm">登录</button>
+    </view>
+  </view>
+</scroll-view>
